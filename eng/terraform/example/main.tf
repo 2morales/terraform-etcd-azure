@@ -76,7 +76,6 @@ module "etcd_node1" {
   deployment_name      = "${local.deployment_name}1"
   location             = local.location
   resource_group_name  = azurerm_resource_group.this.name
-  subnet_id            = azurerm_subnet.this.id
   network_profile_id   = azurerm_network_profile.this.id
   etcd_initial_cluster = "${local.deployment_name}1=http://${local.deployment_name}1.${local.zone_name}:2380,${local.deployment_name}2=http://${local.deployment_name}2.${local.zone_name}:2380,${local.deployment_name}3=http://${local.deployment_name}3.${local.zone_name}:2380"
   zone_name            = local.zone_name
@@ -88,7 +87,6 @@ module "etcd_node2" {
   deployment_name      = "${local.deployment_name}2"
   location             = local.location
   resource_group_name  = azurerm_resource_group.this.name
-  subnet_id            = azurerm_subnet.this.id
   network_profile_id   = azurerm_network_profile.this.id
   etcd_initial_cluster = "${local.deployment_name}1=http://${local.deployment_name}1.${local.zone_name}:2380,${local.deployment_name}2=http://${local.deployment_name}2.${local.zone_name}:2380,${local.deployment_name}3=http://${local.deployment_name}3.${local.zone_name}:2380"
   zone_name            = local.zone_name
@@ -100,7 +98,6 @@ module "etcd_node3" {
   deployment_name      = "${local.deployment_name}3"
   location             = local.location
   resource_group_name  = azurerm_resource_group.this.name
-  subnet_id            = azurerm_subnet.this.id
   network_profile_id   = azurerm_network_profile.this.id
   etcd_initial_cluster = "${local.deployment_name}1=http://${local.deployment_name}1.${local.zone_name}:2380,${local.deployment_name}2=http://${local.deployment_name}2.${local.zone_name}:2380,${local.deployment_name}3=http://${local.deployment_name}3.${local.zone_name}:2380"
   zone_name            = local.zone_name

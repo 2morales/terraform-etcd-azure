@@ -23,11 +23,6 @@ variable "zone_name" {
   description = "DNS zone name."
 }
 
-variable "subnet_id" {
-  type        = string
-  description = "Subnet ID."
-}
-
 variable "network_profile_id" {
   type        = string
   description = "Network profile ID."
